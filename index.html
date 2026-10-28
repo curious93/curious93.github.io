@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Sun per Euro ranks non-stop winter destinations from German airports by extra warmth per euro of airfare. Launch winter 2026/27.">
+<title>Sun per Euro</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow reading column; a deep-sky band on top, warm paper below, a sun disc as the only ornament */
+:root{
+  --paper:#FBF7EE; --ink:#1B2430; --muted:#5B6673; --line:#E3DCCB;
+  --sky:#0E3A5C; --sky-ink:#F2F6FA; --sun:#F2B134; --sun-ink:#2B1D05;
+  --display:"Outfit",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --paper:#13181F; --ink:#EDE8DC; --muted:#A6AEB8; --line:#2A323C;
+  --sky:#0A2A43; --sky-ink:#F2F6FA; --sun:#F2B134; --sun-ink:#2B1D05; color-scheme:dark } }
+:root[data-theme="dark"]{
+  --paper:#13181F; --ink:#EDE8DC; --muted:#A6AEB8; --line:#2A323C;
+  --sky:#0A2A43; --sky-ink:#F2F6FA; --sun:#F2B134; --sun-ink:#2B1D05; color-scheme:dark }
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+.band{background:var(--sky);color:var(--sky-ink)}
+.wrap{max-width:720px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header .wrap{padding-block:56px 64px;position:relative;overflow:hidden}
+.brand{font-family:var(--display);font-weight:700;font-size:15px;letter-spacing:.12em;text-transform:uppercase;opacity:.85;margin:0 0 40px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(34px,6vw,52px);line-height:1.05;margin:0 0 20px;text-wrap:balance;max-width:14ch}
+.lead{font-size:20px;line-height:1.45;max-width:32ch;margin:0;opacity:.92}
+.sun{position:absolute;right:-40px;top:24px;width:200px;height:200px;border-radius:50%;background:var(--sun);opacity:.95}
+@media (max-width:600px){.sun{width:120px;height:120px;right:-30px;top:16px}}
+.status{display:inline-block;margin-top:32px;background:var(--sun);color:var(--sun-ink);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+main .wrap{padding-block:48px 72px;display:grid;gap:48px}
+h2{font-family:var(--display);font-weight:700;font-size:24px;margin:0 0 12px}
+p{margin:0 0 12px;max-width:62ch}
+.steps{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+@media (max-width:640px){.steps{grid-template-columns:1fr}}
+.step{border-top:3px solid var(--sun);padding-top:12px;min-width:0}
+.step b{display:block;font-family:var(--display);font-size:18px;margin-bottom:6px}
+.step span{color:var(--muted);font-size:15px}
+.formula{font-family:var(--display);font-size:22px;padding:18px 20px;border:1px solid var(--line);border-radius:6px;font-variant-numeric:tabular-nums}
+.formula small{display:block;font-family:var(--body);font-size:14px;color:var(--muted);margin-top:6px}
+dl{display:grid;grid-template-columns:max-content 1fr;gap:8px 20px;margin:0;font-size:16px}
+dt{color:var(--muted)}dd{margin:0}
+@media (max-width:480px){dl{grid-template-columns:1fr}dt{margin-top:8px}}
+footer{border-top:1px solid var(--line)}
+footer .wrap{padding-block:24px;font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="band">
+  <div class="wrap">
+    <div class="sun" aria-hidden="true"></div>
+    <p class="brand">Sun per Euro</p>
+    <h1>Where is the most warmth for your money this winter?</h1>
+    <p class="lead">A decision tool for winter travellers without a fixed destination. Pick your departure airport and month; we rank every non-stop destination by how much warmer it is per euro of airfare.</p>
+    <span class="status">In development · Launch winter 2026/27</span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section>
+      <h2>What it does</h2>
+      <p>Most travel sites sort by price. Sun per Euro sorts by the reason people fly south in winter: warmth. For each departure airport and month we combine airfares with destination weather and show which trips give the most extra degrees per euro.</p>
+    </section>
+
+    <section>
+      <h2>How it works</h2>
+      <div class="steps">
+        <div class="step"><b>1. Choose</b><span>Departure airport in Germany, travel month from November to March, trip length and luggage.</span></div>
+        <div class="step"><b>2. Compare</b><span>Top 10 destinations ranked by euro per degree, with sunshine hours, rainy days and a seasonal trend.</span></div>
+        <div class="step"><b>3. Book</b><span>Links go to established flight and hotel booking partners. Prices are checked there before you book.</span></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Independence</h2>
+      <p>Sun per Euro is an independent project from Germany. Booking links lead to established flight, hotel and package partners and are labelled as advertising. Rankings are computed from weather and price only and are never influenced by commission.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">Sun per Euro · Independent project, Germany · Weather data: Open-Meteo.com (CC BY 4.0)</div>
+</footer>
+</body>
+</html>
